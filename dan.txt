@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<style type="text/css">
+		body{
+			background-image:linear-gradient(black,blue);
+			
+
+			background-repeat: no-repeat;
+		}
+		
+		form{
+			border:2px solid ;
+				color:black;
+				background-color:white;	
+				width:40%; 
+						padding: 100px 0px;
+						margin:70px;
+						
+             font-family: Times New Roman;
+             font-size: 20px;
+		}
+		h1{
+			padding-bottom: 23px;
+		}
+		input{
+			border: 2px solid red;
+  border-radius: 4px;
+  width: 65%;
+  padding: 10px 0px;
+		}
+		a{
+			font-size: 15px;
+			color:black;
+		}
+		img{
+			padding-left: 80%;
+
+		}
+
+	</style>
+</head>
+<body>
+	
+
+	<center>
+	<pre>
+<form name="admin" action="adlogin">
+	                       
+ Username
+   	      
+   	      <input type="text" name="uname" placeholder="Type your username"  required>
+ 
+ Password
+   	      
+   	      <input type="password" name="pwd" placeholder="Type your password" required>
+   	     
+   	
+   	      <input type="submit" name="submit" value="Login">
+   	                                   <a href="www.google.com">forgot password?</a>
+   </form>
+   </pre>
+   </center>
+</body>
+</html>
+
+
+
+
+jsp:
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>jsp validation</title>
+</head>
+<body>
+<%
+String name=request.getParameter("uname");
+String pass=request.getParameter("pwd");
+if(name.equals("Daniel")&(pass.equals("Daniel@1234")))
+{
+	out.println("welcome"+" "+name);
+}
+else
+{
+	out.println("Invalid user");
+}
+%>
+</body>
+</html>
